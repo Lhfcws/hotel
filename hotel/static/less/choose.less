@@ -1,0 +1,57 @@
+
+@orange: rgb(246, 139, 30);
+@blue: rgb(0, 109, 174);
+html body{
+	h3{
+		color: @orange;
+	}
+	#Progress{
+		.span3{
+			h3{
+				font-size: 17px;
+				color: @blue;
+				img{
+					float: right;
+				}
+			}
+			 
+		}
+		.current{
+			h3{
+				color: @orange;
+				font-size: 19px;
+			}
+		}
+	}
+	.big{
+			font-weight: bold;
+	}
+	.content{
+		padding: 10px;
+		border: solid 1px #D6D6D6;
+	}
+	.part_title{
+		background: @blue;
+		border: solid 1px #D6D6D6;
+		padding-left: 20px;
+	}
+	#Hotel-info{
+	}
+	#Room-avaliable{	 
+		.cell{
+			height: 60px;
+			width: 30px;
+			float: left;
+			border: solid 1px gray;
+			border-right: none;
+			text-align: center;
+			.day{
+				border-bottom: solid 1px gray;
+				height: 30px;
+			}
+		}
+		.cell:last-child{
+			border-right: solid 1px gray;
+		}
+	}
+}

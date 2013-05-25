@@ -1,0 +1,153 @@
+body{
+    color: #555;
+}
+
+.gs{
+    position: relative;
+    overflow: hidden;
+    width: 9999px;
+    height: 100%;
+}
+
+.g{
+    position: relative;
+    float: left;
+    width: 600px;
+    height: 370px;
+}
+
+#main-gs-inner{
+    position: relative;
+    margin-left: 100px;
+    margin-top: 100px;
+    height: 370px;
+    background: url('gs.png');
+}
+
+body{
+    overflow: hidden;
+    background: url('background.jpg');
+}
+
+.next, .prev{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin-top: 100px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.next:hover, .prev:hover{
+}
+
+.next{
+    margin-left: 460px;
+    background-image: url('arrow-r.png');
+}
+
+.prev{
+    margin-left: 400px;
+    background-image: url('arrow-l.png');
+}
+
+.next:hover{
+    background-image: url('arrow-passby-r.png');
+}
+
+.prev:hover{
+    background-image: url('arrow-passby-l.png');
+}
+
+#bottom{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: url(bottom.png);
+    height: 60px;
+}
+
+#front{
+    width: 211px;
+    height: 636px;
+    background-image: url('portrait.png');
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+#tlearn{
+    position: absolute;
+    top: 100px;
+    left: 130px;
+}
+
+.g .form{
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute;
+    top: -80px;
+    max-height: 400px;
+}
+
+.form input, .form textarea{
+    border: 1px solid #ccc;
+    line-height: 20px;
+    min-width: 300px;
+}
+
+.form textarea{
+    height: 100px;
+}
+
+.g .igroup{
+    margin: 10px 0;
+    vertical-align: top;
+}
+
+#active{
+    position: absolute;
+    top: 60px;
+    left: 135px;
+}
+
+#book{
+    position: absolute;
+    left: 90px;
+    top: 100px;
+}
+
+#win{
+    position: absolute;
+    top: 140px;
+    left: 80px;
+}
+
+.g > div > ul{
+    margin-top: 10px;
+}
+
+.add{
+    font-size: 12px;
+    color: #47a;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.hidden{
+    display: none;
+}
+
+.content a{
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+    padding: 5px;
+    display: inline-block;
+    margin: 5px;
+    background: #ff8;
+    border-radius: 5px;
+}

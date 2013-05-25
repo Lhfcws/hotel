@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="jquery.js"></script>    
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="main.css" rel="stylesheet" type="text/css" />      
+  </head>
+  <body>
+    <div id="main-gs" class="gs">
+      <div id="front"></div>
+      <div id="main-gs-inner">
+        <div class="g">
+          <div id="tlearn">
+            <h2>我的短期游学经历有：</h2>
+            <div class="content"></div>
+            <a class="add" href="#" data-action="add">添加</a>
+            <div class="form hidden">
+              <div class="igroup">
+                时间：<input name="time" type="text" />
+              </div>
+              <div class="igroup">
+                地点：<input class="main" name="where" type="text" /> 
+              </div>
+              <div class="igroup">
+                主题：<input name="topic" type="text" /> 
+              </div>
+              <div class="igroup">
+                感想：<textarea name="think" type="text"></textarea> 
+              </div>
+              <button data-action="save">保存</button>
+              <button data-action="cancel">取消</button>
+            </div>
+          </div>
+          <a class="next" data-action="next">&nbsp</a>
+        </div>
+        <div class="g">
+          <div id="active">
+            <h2>我参加了以下活动：</h2>
+            <div class="content"></div>
+            <a class="add" href="#" data-action="add">添加</a>
+            <div class="form hidden">
+              <div class="igroup">
+                名称：<input class="main" name="name" type="text" /> 
+              </div>
+              <div class="igroup">
+                类型：<input name="type" type="text" /> 
+              </div>
+              <div class="igroup">
+                时间：<input name="time" type="text" /> 
+              </div>
+              <div class="igroup">
+                人员：<input name="team" type="text" /> 
+              </div>
+              <div class="igroup">
+                心得：<textarea name="think" type="text"></textarea> 
+              </div>
+              <button data-action="save">保存</button>
+              <button data-action="cancel">取消</button>
+            </div>
+          </div>
+          <a class="prev" data-action="prev">&nbsp</a>
+          <a class="next" data-action="next">&nbsp</a>
+        </div>
+        <div class="g">
+          <div id="book">
+            <h2>我阅读了以下课外经典书籍：</h2>
+            <div class="content"></div>
+            <a class="add" href="#" data-action="add">添加</a>
+            <div class="form hidden">
+              <div class="igroup">
+                书名：<input class="main" name="book" type="text" /> 
+              </div>
+              <div class="igroup">
+                时长：<input name="long" type="text" /> 
+              </div>
+              <div class="igroup">              
+                感想：<textarea name="think" type="text"></textarea> 
+              </div>              
+              <button data-action="save">保存</button>
+              <button data-action="cancel">取消</button>
+            </div>
+          </div>
+          <a class="prev" data-action="prev">&nbsp</a>
+          <a class="next" data-action="next">&nbsp</a>
+        </div>
+        <div class="g">
+          <div id="win">
+            <h2>我参加了以下的课外竞赛：</h2>
+            <div class="content"></div>
+            <a class="add" href="#" data-action="add">添加</a>
+            <div class="form hidden">
+              <div class="igroup">
+                项目：<input class="main" name="project" type="text" /> 
+              </div>
+              <div class="igroup">
+                时间：<input name="time" type="text" /> 
+              </div>
+              <div class="igroup">
+                地点：<input name="where" type="text" /> 
+              </div>
+              <div class="igroup">
+                获奖：<input name="win" type="text" /> 
+              </div>
+              <div class="igroup">
+                心得：<textarea name="think" type="text"></textarea> 
+              </div>
+              <button data-action="save">保存</button>
+              <button data-action="cancel">取消</button>
+            </div>            
+          </div>
+          <a class="prev" data-action="prev">&nbsp</a>
+        </div>
+      </div>
+    </div>
+    <div id="bottom"></div>
+    <script type="text/javascript" src="main.js"></script>    
+  </body>
+</html>

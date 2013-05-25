@@ -1,0 +1,181 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hotel  reserve</title>
+	<!-- less files -->
+	<link rel = "stylesheet/less"  type = "text/css" href = "less/index.less" />
+	<link rel = "stylesheet/less"  type = "text/css" href = "less/choose.less" />
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap-responsive.min.css">
+</head>
+<body>
+<div class="container ">
+	<!-- nav-group -->
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="page-header">
+				<h1>
+					<img src="assets/logo.png" width="240px" alt=""> <small>search->choose->pay </small>
+				</h1>
+			</div>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">Hotels</a>
+				</li>
+				<li class="disabled">
+					<a href="#">News</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- choose hotel -->
+ 	<div class="row-fluid">
+ 		<!-- progress-navigation-bar -->
+	 	<div class="row-fluid" id="Progress">
+			<div class="span3">
+				<h3>
+					Search
+					<img src="assets/progress_arrow.png">
+				</h3>
+			</div>
+			<div class="span3  current">
+				<h3>
+					Choose
+					<img src="assets/progress_arrow.png">
+				</h3>
+			</div>
+			<div class="span3">
+				<h3>
+					choose room
+					<img src="assets/progress_arrow.png">
+				</h3>
+			</div>
+			<div class="span3">
+				<h3>
+					confirm reservation
+				</h3>
+			</div>
+		</div>
+
+		<!-- summary -->
+		<div class="row-fluid" id="Summary">
+			<div class="span12">
+				<h3 class="part_title">
+					Summary
+				</h3>
+				<div class="content">
+					<table class="table">
+						<tr>
+							<td>
+								<span class="big">City:</span>
+							</td>
+							<td>Caims</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="big">Check In:</span>
+							</td>
+							<td>Tue 22 Feb 2013</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="big">Check Out:</span>
+							</td>
+							<td>Wed 22 Feb 2013</td>
+						</tr>
+					</table>
+					<a href="index.html">Search again</a>
+				</div>
+				
+			</div>
+		</div>
+
+		<!-- sort-by -->
+		<div class="row-fluid">
+			<div class="span12">
+				<h3 class="part_title"> Search Result</h3>
+				<div class="content">
+					<div class="row-fluid">
+						<div class="span2">
+							<span>sorted by</span>
+							&nbsp; &nbsp; &nbsp;
+						</div>
+						<div class="span2">
+							<label class="radio">
+							  <input type="radio" name="optionsRadios"   value="option1" checked>
+							  our favourites
+							</label>
+						</div>
+						<div class="span2">
+							<label class="radio">
+							  <input type="radio" name="optionsRadios"  value="option2">
+							  lowest price 
+							</label>
+						</div>
+						<div class="span2">
+							<label class="radio">
+							  <input type="radio" name="optionsRadios"  value="option2">
+							  highest star rating
+							</label>
+						</div>
+						<div class="span2">
+							<label class="radio">
+							  <input type="radio" name="optionsRadios"  value="option2">
+							  alphabetical
+							</label>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- hotel search result -->
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="content">
+					<table class="table">
+						<thead>
+							<tr>
+								<th> Name </th> 
+								<th> Min Stay </th> <th> Tue </th> <th> Wed </th> <th>Thu</th>
+								<th>Fri</th> <th>Sat</th> <th>Sun</th> <th>Mon</th> <th>Total</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									Lyons Motel Cairns
+								</td>
+								<td>
+									 1 nt
+								</td>
+								<td>
+									 65
+								</td>
+								<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> 
+								<td>
+									 AUD 65
+								</td>
+								<td>Continue</td>
+							</tr>
+		 
+						</tbody>
+					</table>
+				</div>			
+			</div>
+		</div>
+
+ 	</div>
+</div>
+	<script src = "lib/less.js"></script>
+	<script src="lib/jquery.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

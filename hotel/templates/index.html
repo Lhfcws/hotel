@@ -1,0 +1,194 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hotel  reserve</title>
+	<!-- less files -->
+	{% load static %}
+	{% get_static_prefix as STATIC %}
+	<link rel = "stylesheet/less"  type = "text/css" href = "{{ STATIC }}less/index.less" />
+	<link rel="stylesheet" href="{{ STATIC }}lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ STATIC }}lib/bootstrap/css/bootstrap-responsive.min.css">
+</head>
+<body>
+<div class="container ">
+	<!-- nav-group -->
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="page-header">
+				<h1>
+					<img src="{{ STATIC }}assets/logo.png" width="240px" alt=""> <small>search->choose->pay </small>
+				</h1>
+			</div>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">Hotels</a>
+				</li>
+				<li class="disabled">
+					<a href="#">News</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="row-fluid">
+
+		<!-- left-cards -->
+		<div class="span6">
+			<div class="row-fluid card">
+				<div class="card-title">
+					<h3>Hotel Deals of the Day</h3>
+				</div>
+				<div class="span12 card-content">
+					<form action="" method="post">
+						<br>
+	 					<p>where do you like to go?</p>
+					
+						<!-- place-to-go -->
+						<input type="text" width="100%"  
+							id="Input-place-to-go" 
+							name="place_to_go"
+							placeholder="Country, City, Airport, Area, Landmark" /> 
+
+						<!-- check-in check-out time -->
+						<div class="row-fluid">
+							<div class="span6">
+									<p>check-in</p>
+									<input type="date"/>  
+							</div>
+							<div class="span6">
+									<p>check-out</p>
+									<input type="date"/>  
+							</div>
+						</div> 
+						<div class="row-fluid">
+							<div class="span12">
+								<button class="btn btn-success pull-right" type="button">Search</button>
+							</div>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+			<div class="row-fluid card">
+				<div class="span12">
+					<!-- card-title -->
+					<div class="card-title">
+						<h3>Great International Hotel Deals</h3>
+					</div>
+					<!-- card-content -->
+					<div class="card-content">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>
+										#
+									</th>
+									<th>
+										Hotel Name
+									</th>
+									<th>
+										Payment  
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										1
+									</td>
+									<td>
+										London Hotels
+									</td>
+									<td>
+										fr. $70 pn
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- right cards -->
+		<div class="span6">
+			<!-- ad position -->
+			<div class="row-fluid card">
+				<div class="span12">
+					<div class="card-title">
+						<h3>Day Spa Specials</h3>
+					</div>
+					<div class="card-content">
+						<p class="clearfix">
+							<img 
+							src="assets/dayspa_specials.jpg" 
+							style="float: left; margin-right: 5px" 
+							alt="">	
+						 	Take advantage of these amazing health and spa facilities which will provide you with opportunities to recharge, rejuvenate and relax! Carefully selected properties, book a room today and prepare to pamper your body and mind! <a href="###">Book now</a>
+						 </p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="row-fluid card">
+				<div class="span12">
+					<div class="card-title">
+						<h3>hotels_sheraton </h3>
+					</div>
+					<div class="card-content">
+						<p>
+							<img src="{{ STATIC }}assets/hotels_sheraton.jpg" alt="">
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="row-fluid card">
+				
+				<div class="span12">
+					<div class="card-title">
+						<h3>Best Hotel Deals of the week </h3>
+					</div>
+					<div class="card-content">
+						<ol>
+							<li>
+								Lorem ipsum dolor sit amet
+							</li>
+							<li>
+								Consectetur adipiscing elit
+							</li>
+							<li>
+								Integer molestie lorem at massa
+							</li>
+							<li>
+								Facilisis in pretium nisl aliquet
+							</li>
+							<li>
+								Nulla volutpat aliquam velit
+							</li>
+							<li>
+								Faucibus porta lacus fringilla vel
+							</li>
+							<li>
+								Aenean sit amet erat nunc
+							</li>
+							<li>
+								Eget porttitor lorem
+							</li>
+						</ol>
+					</div>			
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+	<script src = "{{ STATIC }}lib/less.js"></script>
+	<script src="{{ STATIC }}lib/jquery.js"></script>
+	<script src="{{ STATIC }}lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

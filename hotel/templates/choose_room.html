@@ -1,0 +1,205 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hotel  reserve</title>
+	<!-- less files -->
+	<link rel = "stylesheet/less"  type = "text/css" href = "less/index.less" />
+	<link rel = "stylesheet/less"  type = "text/css" href = "less/choose.less" />
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap-responsive.min.css">
+</head>
+<body>
+<div class="container ">
+	<!-- nav-group -->
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="page-header">
+				<h1>
+					<img src="assets/logo.png" width="240px" alt=""> <small>search->choose->pay </small>
+				</h1>
+			</div>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">Hotels</a>
+				</li>
+				<li class="disabled">
+					<a href="#">News</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- choose hotel room -->
+	<div class="row-fluid">
+		<!-- progress-navigation-bar -->
+	 	<div class="row-fluid" id="Progress">
+			<div class="span3">
+				<h3>
+					Search
+					<img src="assets/progress_arrow.png">
+				</h3>
+			</div>
+			<div class="span3 ">
+				<h3>
+					Choose
+					<img src="assets/progress_arrow.png">
+				</h3>
+			</div>
+			<div class="span3  current">
+				<h3>
+					choose room
+					<img src="assets/progress_arrow.png">
+				</h3>
+			</div>
+			<div class="span3">
+				<h3>
+					confirm reservation
+				</h3>
+			</div>
+		</div>
+
+		<!-- summary -->
+		<div class="row-fluid" id="Summary">
+			<div class="span12">
+				<h3 class="part_title">
+					Summary
+				</h3>
+				<div class="content">
+					<table class="table">
+						<tr>
+							<td>
+								<span class="big">City:</span>
+							</td>
+							<td>Caims</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="big">Hotel name:</span>
+							</td>
+							<td>Royal Hotel-St Kilda Road, Melbounre</td>
+						</tr>					 
+					</table>
+				</div>
+				
+			</div>
+		</div>
+		
+		<!-- hotel info -->
+		<div class="row-fluid" id="Hotel-info">
+			<div class="span12">
+				<h3 class="part_title" style="color: white">
+					Royal Hotel-St Kilda Road, Melbounre
+				</h3>
+			</div>
+			<div class="content clearfix">
+				<p>
+					<img src="assets/hotel_sample.jpg" alt="" 
+					class="pull-left" 
+					style="margin: 5px; height: 120px;">
+					Double bed made up with linen. Linen can be hired for the single bunk bed. Toaster, kettle and microwave are provided but cooking inside is not allowed. The camp kitchen and amenities are nearby.
+				</p>
+			</div>
+		</div>
+
+		<!-- room avaliable -->
+		<div class="row-fluid" id="Room-avaliable">
+			<div class="span12">
+				<h3 class="part_title"
+					style="text-align: center; font-size: 18px; color: white">
+					Room Avaliability 
+				</h3>
+				<div class="content clearfix" id="Room-avalibility">
+				</div>
+			</div>
+		</div>
+
+		<!-- arrival and  departure dates -->
+		<div class="row-fluid" id="Check-info">
+			<div class="span12" id="Check-date">
+				<h3 class="part_title" 
+					style="color: white; font-size: 18px;">
+					arrival and  departure dates 
+				</h3>
+				<div class="content">
+					<div class="row-fluid">
+						<div class="span3">
+							<p>check in date:</p>
+							<p>
+								<input type="date" name="check_in_date">
+							</p>
+						</div>
+						<div class="span2">
+							<p>No. of Nights</p>
+							<p>
+								<input type="number" name="nights">
+							</p>
+						</div>
+					</div>	
+					<hr>	
+					<div class="row-fluid">
+						<div class="span1">
+							<p>Rooms</p>
+							<input type="number"
+								name="rooms"
+								style="width:100%">
+						</div>
+						<div class="span1">
+							<p>Adults</p>
+							<input type="number"
+								name="adults"
+								style="width:100%">
+						</div>
+						<div class="span1">
+							<p>Children</p>
+							<input type="number"
+								name="children"
+								style="width:100%">
+						</div>
+						<div class="span7"></div>
+						<div class="span2">
+							<input type="button" 
+								class="btn btn-success"
+								value="continute"
+								style="margin-top: 20px"/>
+						</div>
+						
+					</div>
+					<div class="row-fluid"></div>
+				</div>
+			</div>
+			
+		</div>
+
+
+
+	</div>
+</div>
+	<script src = "lib/less.js"></script>
+	<script src="lib/jquery.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="lib/jquery.tmpl.js"></script>
+	<script>
+		$(function(){
+			$Avaliability = $("#Room-avalibility");
+			function init(){
+				var cell = '<div class="cell"> \
+							<div class="day">${day}</div>\
+							<div class="check">${check}</div>\
+						</div>';
+				var users = [], i;
+				for (i = 1; i <= 31; i++){
+					users.push({
+						day: i,
+						check: 0
+					})
+				}
+				$.template('template', cell);
+				$Avaliability.append( $.tmpl('template', users) );  
+			}
+			init();
+		})
+	</script>
+</body>
+</html>
