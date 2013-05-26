@@ -3,10 +3,12 @@
 	<meta charset="utf-8">
 	<title>Hotel  reserve</title>
 	<!-- less files -->
-	<link rel = "stylesheet/less"  type = "text/css" href = "less/index.less" />
-	<link rel = "stylesheet/less"  type = "text/css" href = "less/choose.less" />
-	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap-responsive.min.css">
+	{% load static %}
+	{% get_static_prefix as STATIC %}
+	<link rel = "stylesheet/less"  type = "text/css" href = "{{ STATIC }}less/index.less" />
+	<link rel = "stylesheet/less"  type = "text/css" href = "{{ STATIC }}less/choose.less" />
+	<link rel="stylesheet" href="{{ STATIC }}lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ STATIC }}lib/bootstrap/css/bootstrap-responsive.min.css">
 </head>
 <body>
 <div class="container ">
@@ -15,7 +17,7 @@
 		<div class="span12">
 			<div class="page-header">
 				<h1>
-					<img src="assets/logo.png" width="240px" alt=""> <small>search->choose->pay </small>
+					<img src="{{ STATIC }}assets/logo.png" width="240px" alt=""> <small>search->choose->pay </small>
 				</h1>
 			</div>
 			<ul class="nav nav-tabs">
@@ -38,19 +40,19 @@
 			<div class="span3">
 				<h3>
 					Search
-					<img src="assets/progress_arrow.png">
+					<img src="{{ STATIC }}assets/progress_arrow.png">
 				</h3>
 			</div>
 			<div class="span3 ">
 				<h3>
 					Choose
-					<img src="assets/progress_arrow.png">
+					<img src="{{ STATIC }}assets/progress_arrow.png">
 				</h3>
 			</div>
 			<div class="span3  current">
 				<h3>
 					choose room
-					<img src="assets/progress_arrow.png">
+					<img src="{{ STATIC }}assets/progress_arrow.png">
 				</h3>
 			</div>
 			<div class="span3">
@@ -117,8 +119,8 @@
 		</div>
 	</div>
 </div>
-	<script src = "lib/less.js"></script>
-	<script src="lib/jquery.js"></script>
-	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src = "{{ STATIC }}lib/less.js"></script>
+	<script src="{{ STATIC }}lib/jquery.js"></script>
+	<script src="{{ STATIC }}lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
