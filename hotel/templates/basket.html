@@ -33,10 +33,9 @@
 			</ul>
 		</div>
 	</div>
-
-	<!-- choose hotel -->
- 	<div class="row-fluid">
- 		<!-- progress-navigation-bar -->
+	<!-- choose hotel room -->
+	<div class="row-fluid">
+		<!-- progress-navigation-bar -->
 	 	<div class="row-fluid" id="Progress">
 			<div class="span3">
 				<h3>
@@ -44,19 +43,19 @@
 					<img src="{{ STATIC }}assets/progress_arrow.png">
 				</h3>
 			</div>
-			<div class="span3  current">
+			<div class="span3 ">
 				<h3>
 					Choose
 					<img src="{{ STATIC }}assets/progress_arrow.png">
 				</h3>
 			</div>
-			<div class="span3">
+			<div class="span3 ">
 				<h3>
 					choose room
 					<img src="{{ STATIC }}assets/progress_arrow.png">
 				</h3>
 			</div>
-			<div class="span3">
+			<div class="span3  current">
 				<h3>
 					confirm reservation
 				</h3>
@@ -67,76 +66,46 @@
 		<div class="row-fluid" id="Summary">
 			<div class="span12">
 				<h3 class="part_title">
-					Summary
+					Cart
 				</h3>
 				<div class="content">
 					<table class="table">
-						<tr>
-							<td>
-								<span class="big">Keyword:</span>
-							</td>
-							<td>{{ keyword }}</td>
-						</tr>
-						<tr>
-							<td>
-								<span class="big">Check In:</span>
-							</td>
-							<td>{{ ind }}</td>
-						</tr>
-						<tr>
-							<td>
-								<span class="big">Check Out:</span>
-							</td>
-							<td>{{ outd }}</td>
-						</tr>
+						 <thead>
+						 	<tr>
+						 		<th>Order ID</th>
+						 		<th>Room Type</th>
+						 		<th>Price</th>
+						 		<th>Customer</th>
+						 		<th>Contact</th>
+						 		<th></th>
+						 	</tr>
+						 </thead>
+						 <tbody>
+						 	<tr>
+						 		<td>{{ reserve.id }}</td>
+						 		<td>{{ reserve.room.roomtype }} </td>
+						 		<td>{{ reserve.cost }}</td>
+						 		<td>{{ reserve.customer.name }}</td>
+						 		<td>{{ reserve.customer.mobile}}</td>
+						 		<td><button class="btn btn-info btn-mini">Delete</button></td>
+						 	</tr>
+						 </tbody>
 					</table>
-					<a href="/index">Search again</a>
+					<div class="row-fluid">
+						<div class="span9"></div>
+						<div class="span1 pull-right">
+							<div class="btn btn-success">Pay !</div>
+						</div>
+					</div>					
 				</div>
 				
 			</div>
 		</div>
-
-		<!-- sort-by -->
-		<div class="row-fluid">
-			<div class="span12">
-				<h3 class="part_title"> Search Result</h3>
-			</div>
-		</div>
-
-		<!-- hotel search result -->
-		<div class="row-fluid">
-			<div class="span12">
-				<div class="content">
-					<table class="table">
-						<thead>
-							<tr>
-								<th> Name </th> <th>description</th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							{% for h in hotel_list %}
-							<tr>
-								<td>
-									<strong>{{ h.name }}</strong>
-								</td>
-								<td>
-									 {{ h.description }}
-								</td>
-								<td><a href="/choose_room?q={{ q }}&hotel={{ h.id }}" class='btn btn-primary'>Book!</a></td>
-							</tr>
-		 					{% endfor %}
-						</tbody>
-					</table>
-				</div>			
-			</div>
-		</div>
-		<br><br><br>
-
- 	</div>
+	</div>
 </div>
 	<script src = "{{ STATIC }}lib/less.js"></script>
 	<script src="{{ STATIC }}lib/jquery.js"></script>
 	<script src="{{ STATIC }}lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{{ STATIC }}lib/jquery.tmpl.js"></script>
 </body>
 </html>

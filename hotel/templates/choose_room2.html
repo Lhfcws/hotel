@@ -80,7 +80,13 @@
 							<td>
 								<span class="big">Hotel name:</span>
 							</td>
-							<td>{{ hotel.name }}</td>
+							<td>{{ reserve.hotel.name }}</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="big">Room:</span>
+							</td>
+							<td>{{ reserve.room.roomtype }}</td>
 						</tr>					 
 					</table>
 				</div>
@@ -92,7 +98,7 @@
 		<div class="row-fluid" id="Hotel-info">
 			<div class="span12">
 				<h3 class="part_title" style="color: white">
-					{{ hotel.name }}
+					{{ reserve.hotel.name }}
 				</h3>
 			</div>
 			<div class="content clearfix">
@@ -100,90 +106,89 @@
 					<img src="{{ STATIC }}assets/hotel_sample.jpg" alt="" 
 					class="pull-left" 
 					style="margin: 5px; height: 120px;">
-					{{ hotel.description }}
+					{{ reserve.hotel.description }}
 				</p>
 			</div>
 		</div>
-
-		<!-- room avaliable -->
-		<!--
-		<div class="row-fluid" id="Room-avaliable">
-			<div class="span12">
-				<h3 class="part_title"
-					style="text-align: center; font-size: 18px; color: white">
-					Room Avaliability 
-				</h3>
-				<div class="content clearfix" id="Room-avalibility">
-				</div>
-			</div>
-		</div>
-		-->
 		<!-- arrival and  departure dates -->
 		<div class="row-fluid" id="Check-info">
 			<div class="span12" id="Check-date">
-				<h3 class="part_title" 
-					style="color: white; font-size: 18px;">
-					Room Select
+				<h3 class="part_title" style="color: white; font-size: 18px;">
+					Other information
 				</h3>
-				<div class="content">			 
+				<form method='post' action='/confirm/'>
+				<div class="content">
 					<div class="row-fluid">
-						<table class="table">
-							<thead>
-								<tr>
-									<th>Room type</th>
-									<th>price</th>
-									<th>wifi</th>
-									<th></th>
-								</tr>
-							</thead>
-							<tbody>
-								{% for r in room_list %}
-								<tr>
-									<td>{{ r.roomtype }}</td>
-									<td>${{ r.price }}</td>
-									<td>{{ r.wifi }}</td>
-									<td>
-										<a href="/choose_room2?q={{ q }}&city={{ city }}&room={{ r.id }}" class="btn btn-primary">continue</a>
-									</td>
-								</tr>
-								{% endfor %}
-							</tbody>
-						</table>
-
+						<div class="span3">
+							<p>check in date:</p>
+							<p>
+								2013-05-26
+							</p>
+						</div>
+						<input style="display:none" name="q" value="{{ q }}">
+						<input style="display:none" name="room_id" value="{{ room.id }}">
+						<div class="span3">
+							<p>No. of Nights</p>
+							<p>
+								<input type="text" name="nights" value='1'>
+							</p>
+						</div>
+						<div class="span2">
+							<p>Rooms</p>
+							<input type="text"
+								name="rooms"
+								style="width:100%" value='1'>
+						</div>
+						<div class="span1">
+							<p>Adults</p>
+							<input type="text"
+								name="adults"
+								style="width:100%" value='0'>
+						</div>
+						<div class="span1">
+							<p>Children</p>
+							<input type="text"
+								name="children"
+								style="width:100%" value='0'>
+						</div>
+					</div>	
+					<hr>	
+					<div class="row-fluid">
+						
+						<div class="span3">
+							<p>Your name:</p>
+							<input type="text" placeholder="your name" name='name' style="width: 100%">
+						</div>
+						<div class="span3">
+							<p>Your Phone Number:</p>
+							<input type="text" placeholder="your Phone Number"name='mobile' style="width: 100%">
+						</div>
+						<div class="span3">
+							<p>Your  Email:</p>
+							<input type="email" placeholder="your Email" style="width: 100%" name='email'>
+						</div>
+						<hr>
+					</div>
+					<div class="row-fluid">
+						<div class="span2 pull-right">
+							<input type="submit" 
+								class="btn btn-success pull-right"
+								value="continute"
+								style="margin-top: 20px"/>
+						</div>
+						
 					</div>
 				</div>
+				</form>
+				<br><br><br><br>
 			</div>
 			
 		</div>
-
-
-
 	</div>
 </div>
 	<script src = "{{ STATIC }}lib/less.js"></script>
 	<script src="{{ STATIC }}lib/jquery.js"></script>
 	<script src="{{ STATIC }}lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="{{ STATIC }}lib/jquery.tmpl.js"></script>
-	<script>
-		$(function(){
-			$Avaliability = $("#Room-avalibility");
-			function init(){
-				var cell = '<div class="cell"> \
-							<div class="day">${day}</div>\
-							<div class="check">${check}</div>\
-						</div>';
-				var users = [], i;
-				for (i = 1; i <= 31; i++){
-					users.push({
-						day: i,
-						check: 0
-					})
-				}
-				$.template('template', cell);
-				$Avaliability.append( $.tmpl('template', users) );  
-			}
-			init();
-		})
-	</script>
 </body>
 </html>

@@ -45,15 +45,15 @@
 				<div class="span12 card-content">
 					<form action="/choose/" method="post">
 						<br>
-	 					<p>where do you like to go?</p>
+	 					<h3>Your request search has no result.</h3>
 					
 						<!-- place-to-go -->
-						<label>City(English):</label>
-						<input type="text" width="100%"  
-							id="Input-place-to-go" 
-							name="find"
-							placeholder="City" /> 
-
+						<label>Please choose city in the list:</label>
+						<select name='find'>
+							{% for c in city_list %}
+							<option value="{{ c.name }}">{{ c.name }}</option>
+							{% endfor %}
+						</select>
 						<!-- check-in check-out time -->
 						<div class="row-fluid">
 							<div class="span6">

@@ -5,8 +5,8 @@
 	<!-- less files -->
 	{% load static %}
 	{% get_static_prefix as STATIC %}
-	<link rel = "stylesheet/less"  type = "text/css" href = "{{ STATIC }}less/index.less" />
-	<link rel = "stylesheet/less"  type = "text/css" href = "{{ STATIC }}less/choose.less" />
+	<link rel="stylesheet/less"  type="text/css" href="{{ STATIC }}less/index.less" />
+	<link rel="stylesheet/less"  type="text/css" href="{{ STATIC }}less/choose.less" />
 	<link rel="stylesheet" href="{{ STATIC }}lib/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="{{ STATIC }}lib/bootstrap/css/bootstrap-responsive.min.css">
 </head>
@@ -49,23 +49,24 @@
 					<img src="{{ STATIC }}assets/progress_arrow.png">
 				</h3>
 			</div>
-			<div class="span3  current">
+			<div class="span3">
 				<h3>
 					choose room
 					<img src="{{ STATIC }}assets/progress_arrow.png">
 				</h3>
 			</div>
-			<div class="span3">
+			<div class="span3 current">
 				<h3>
 					confirm reservation
 				</h3>
 			</div>
 		</div>
+		<hr />
 
 		<!-- summary -->
 		<div class="row-fluid" id="Summary">
 			<div class="span12">
-				<h3 class="part_title">
+				<h3 class="part_title" style="color: white; font-size: 18px;">
 					Summary
 				</h3>
 				<div class="content">
@@ -75,40 +76,46 @@
 								<td>
 									<span class="big">Hotel name:</span>
 								</td>
-								<td>Royal Hotel-St Kilda Road, Melbounre</td>
+								<td>{{ reserve.hotel.name }}</td>
 							</tr>		
 							<tr>
 								<td>
 									<span class="big">City:</span>
 								</td>
-								<td>Caims</td>
+								<td>{{ reserve.hotel.city.name }}</td>
 							</tr>
 							<tr>
 								<td>
 									<span class="big">Check In:</span>
 								</td>
-								<td>Thu 31 Mar 2013</td>
+								<td>{{ reserve.check_in_date }}</td>
 							</tr>
 							<tr>
 								<td>
 									<span class="big">Check Out:</span>
 								</td>
-								<td>Fri 305 Mar 2013</td>
+								<td>{{ reserve.check_out_date }}</td>
 							</tr>
 							<tr>
 								<td>
 									<span class="big">Room selections</span>
 								</td>
 								<td>
-									3 rooms for 4 adults, 3 children
+									{{ reserve.room_amount }} rooms for {{ reserve.adult_amount }} adults, {{ reserve.children_amount }} children
+								</td>
+							</tr>	
+							<tr>
+								<td>
+									<span class="big">Total cost</span>
+								</td>
+								<td>
+									{{ reserve.cost }}
 								</td>
 							</tr>	
 							<tr>
 								<td></td>
 								<td> 
-									<input type="button" 
-										class="btn btn-success pull-right"
-										value="continute"/>
+									<a class="btn btn-success pull-right" href="/basket?q={{ q }}"/>Continue</a>
 								</td>
 							</tr>				
 						</tbody>						 
@@ -122,5 +129,6 @@
 	<script src = "{{ STATIC }}lib/less.js"></script>
 	<script src="{{ STATIC }}lib/jquery.js"></script>
 	<script src="{{ STATIC }}lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{{ STATIC }}lib/jquery.tmpl.js"></script>
 </body>
 </html>
