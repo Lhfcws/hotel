@@ -2,7 +2,9 @@
 #### Group members: 
 >  **Wenzhu Luo, Wenjie Wu, Xuejia Chen, Chenyu Lan**
 
-The project is based on Django 1.4+
+The project is based on Django 1.4+.
+
+Github link && Readme: [https://github.com/Lhfcws/hotel](https://github.com/Lhfcws/hotel)
 
 ## Installation
 > Pre-condition: Make sure you have Django 1.4+ environment.
