@@ -1,8 +1,12 @@
 # SE305 Homework Lab2 ---- hotel
-#### Group members: Wenzhu Luo, Wenjie Wu, Xuejia Chen, Chenyu Lan
-Based on Django 1.4+
+#### Group members: 
+>  **Wenzhu Luo, Wenjie Wu, Xuejia Chen, Chenyu Lan**
+
+The project is based on Django 1.4+
 
 ## Installation
+> Pre-condition: Make sure you have Django 1.4+ environment.
+
 1. Create database `hotel` in MySQL
 
 
