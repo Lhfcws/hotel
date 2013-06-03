@@ -6,6 +6,8 @@ The project is based on Django 1.4+. Recommend to browse in **Google-chrome**.
 
 Github link && Readme: [https://github.com/Lhfcws/hotel](https://github.com/Lhfcws/hotel)
 
+*The final report is in `doc/lab2_report.pdf`*
+
 ## Installation
 > Pre-condition: Make sure you have Django 1.4+ environment.
 
