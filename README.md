@@ -2,7 +2,7 @@
 #### Group members: 
 >  **Wenzhu Luo, Wenjie Wu, Xuejia Chen, Chenyu Lan**
 
-The project is based on Django 1.4+.
+The project is based on Django 1.4+. Recommend to browse in **Google-chrome**.
 
 Github link && Readme: [https://github.com/Lhfcws/hotel](https://github.com/Lhfcws/hotel)
 
