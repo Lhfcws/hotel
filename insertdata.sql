@@ -1,3 +1,10 @@
+
+INSERT INTO `hotel_customer` (`id`, `name`, `email`, `mobile`) VALUES
+(1, 'Wu Wenjie', 'wwj@qq.com', '13800013800'),
+(2, 'chenxuejia', 'sads@asd.com', '10213810223');
+
+
+
 INSERT INTO `hotel_city` (`id`, `name`) VALUES
 (1, 'Beijing'),
 (2, 'London'),
@@ -18,7 +25,7 @@ INSERT INTO `hotel_city` (`id`, `name`) VALUES
 (17, 'Kyoto'),
 (18, 'Osaka'),
 (19, 'Kobe'),
-(20, 'Shanghai'
+(20, 'Shanghai');
 
 INSERT INTO `hotel_hotel` (`id`, `name`, `city_id`, `description`) VALUES
 (1, 'Royal Plaza', 2, 'The spacious lobby of this hotel is distinguished by white Italian marble floors, a stained-glass dome and sweeping wrought-iron balustrades. The 24-hour restaurant, Carousel, offers fresh seafood, a sushi bar, a bakery, Asian and Western buffet counters, and a salad bar. Gourmet Carousel serves a variety of freshly baked pastries. Heat Ultralounge features a live band. The hotel features 10 meeting rooms. A 24-hour fitness centre, an rooftop pool, and a sauna provide recreation and relaxation. This smoke-free property offers practical amenities such as Town Car rentals and transportation to and from Changi International Airport. '),
@@ -35,9 +42,6 @@ INSERT INTO `hotel_hotel` (`id`, `name`, `city_id`, `description`) VALUES
 (12, 'Diaoyutai Hotel', 1, 'You know this!');
 
 
-INSERT INTO `hotel_customer` (`id`, `name`, `email`, `mobile`) VALUES
-(1, 'Wu Wenjie', 'wwj@qq.com', '13800013800'),
-(2, 'chenxuejia', 'sads@asd.com', '10213810223');
 
 INSERT INTO `hotel_room` (`id`, `hotel_id`, `roomtype`, `price`, `wifi`) VALUES
 (1, 2, 'Single Room', 300, 'yes'),
